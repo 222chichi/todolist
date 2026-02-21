@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-box {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+}
+
+.register-box h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.register-box input,
+.register-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.register-box input:focus,
+.register-box select:focus {
+    outline: none;
+    border-color: #4e73df;
+}
+
+.register-box button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4e73df;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-box button:hover {
+    background-color: #2e59d9;
+}
+</style>
+</head>
+<body>
+
+<div class="register-box">
+    <h2>Create Account</h2>
+    <form action="/register" method="POST">
+        <input name="username" placeholder="Username" required>
+        <input name="fullName" placeholder="Full Name" required>
+        <input name="password" type="password" placeholder="Password" required>
+        
+        <select name="role">
+            <option value="normal">Normal</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
